@@ -1,0 +1,26 @@
+
+  <div class="container-fluid">
+    <div class="row" style="margin-top:18vh;overflow-x:hidden">
+      <div [@openClose]="isOpen ? 'open' : 'closed'" class="col-md-5" style='margin-left:2rem;margin-right: 4rem;'>
+        <div class='indicator' id="main_indicator"></div>
+        <h3 style="margin-bottom:0rem;">{{active_location.locationName}}</h3>
+        <h1 style="font-size:6rem;">{{active_location.locationSubHeading}}</h1>
+        <p style='margin-top:1rem;'>{{active_location.locationMainContent}}</p>
+        <button class='btn btn-primary round-button'><i class="bi bi-bookmark-fill"></i></button><button class='btn btn-primary'>Discover Location</button>
+      </div>
+      <div class="col-md-8" style='margin-right:-40%'>
+        <div class="row pt-3">
+          <div class="col-md-3 tile" style="background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(./assets/images/{{place.locationSubHeading}}.jpg) " (mouseover)="tile_live($event)" (mouseleave)="tile_normal($event)" *ngFor="let place of location">
+            <div class='img-backg'>
+              <div class='indicator'></div>
+              <p class="p-sub">{{place.locationName.split(", ")[1]}}</p>
+              <h3 class="p-main">{{place.locationSubHeading}}</h3>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <button class='btn btn-primary round-button'><i class="bi bi-chevron-left"></i></button><button class='btn btn-primary round-button'><i class="bi bi-chevron-right"></i></button>
+        </div>
+        </div>
+    </div>
+    </div>

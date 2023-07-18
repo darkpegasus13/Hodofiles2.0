@@ -1,0 +1,95 @@
+.tile{
+    border-radius: 1rem;
+    background-size: cover;
+    height: 16rem;
+    width: 12rem;
+    margin: 1rem;
+    position: relative;
+    cursor: pointer;
+    box-shadow: 1px 1px 8px 1px #212529;
+    transition: transform ease 0.3s;
+}
+
+  .tile:hover {
+    background-size: cover;
+    transform: scale(1.2);
+  }
+
+.btn-primary{
+    background-color: rgba(0, 0, 0, 0);
+    border: 1px solid white;
+}
+
+.round-button{
+    border-radius: 100%;
+    height:4rem;
+    width:4rem;
+    margin:10px;
+    transition-property: border-width;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+.round-button:hover{
+    border-width: medium;
+}
+.round-button:hover > .bi{
+    font-size: 1.3rem;
+    border-width:medium;
+}
+.indicator{
+    width: 4rem;
+    height: 0.7rem;
+    margin: 1rem 0;
+    background-color: white;
+    border-radius: 1rem;
+}
+
+.tile .indicator{
+    width: 2rem;
+    height: 0.35rem;
+    position: absolute;
+    bottom: 6rem;
+}
+
+h3,h1,p{
+    color:white;
+}
+
+.p-sub, .p-main{
+    position: absolute;
+    bottom: 0;
+}
+.p-sub{
+    bottom: 4rem;
+}
+
+.p-main{
+    bottom: 2rem;
+}
+
+.tile:hover .child,
+.tile:focus .child {
+  -ms-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  transform: scale(1.9);
+}
+
+@keyframes live_hr {
+  0% {
+    width: 20px;
+  }
+
+  50% {
+    width: 45px;
+  }
+
+  100% {
+    width: 60px;
+  }
+}
+
+#main_indicator {
+  animation: live_hr 2s linear infinite alternate-reverse;
+}
